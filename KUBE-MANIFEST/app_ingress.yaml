@@ -16,4 +16,14 @@ spec:
             name: app-cluster-ip
             port: 
               number: 3003
+  - host: usmanofff.ru
+    http:
+      paths:
+      - pathType: Prefix
+        path: /postgres
+        backend:
+          service:
+            name: db-postgres
+            port: 
+              number: 5432
   
