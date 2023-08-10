@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalancer-db-postgres
+  labels:
+    env: prod
+    owner: DenisUsmanov
+spec:
+  selector:
+    app: db-postgres # Selecting pods with those labels  
+  ports:
+    - name: app-listener
+      protocol      : TCP
+      port          : 5432 # Port on LoadBalanser
+      targetPort    : 5432 # Port on Pod
+  type: LoadBalancer
