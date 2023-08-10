@@ -9,4 +9,4 @@ spec:
   ports:
     - port: 3003
   selector:
-    app: ap-django
+    app: app-django

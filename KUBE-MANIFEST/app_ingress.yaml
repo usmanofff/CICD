@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress
+  name: ingress-workin-pleess
   labels:
     name: myingress
 spec:
@@ -10,7 +10,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: /test
+        path: /
         backend:
           service:
             name: app-cluster-ip
