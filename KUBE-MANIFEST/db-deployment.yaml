@@ -17,7 +17,7 @@ spec:
         owner: DenisUsmanov
     spec:
       containers:
-        - name: db
+        - name: db-postgres
           image: postgres:13-alpine
           env:
             - name: POSTGRES_USER
