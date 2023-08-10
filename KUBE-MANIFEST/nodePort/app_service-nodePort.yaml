@@ -6,6 +6,6 @@ spec:
   selector:
     app: app-django
   ports:
-  - port: 3003
+  - port: 30037
     targetPort: 3003
   type: NodePort
