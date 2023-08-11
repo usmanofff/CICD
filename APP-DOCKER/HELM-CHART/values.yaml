@@ -1,0 +1,31 @@
+persistentvolume:
+  capacity: 200M
+  path: /usr/pg_data
+
+persistentvolumeclaim:
+  capacity: 200M
+
+djangoContainer:
+  image: usmcode/diplom:v.1
+  ports: 3003
+  command: [ '/bin/sh' ]
+  args: ['-c', 'python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:3003']
+replicas: 1
+
+tag: v.1
+host: usmanofff.ru
+
+postgresContainer:
+  image: postgres:13-alpine
+
+clasterIP:
+  ports: 5432
+
+data:
+  DB_HOST: ZGItcG9zdGdyZXM=
+  POSTGRES_DB: ZGphbmdvLWRi   
+  POSTGRES_PASSWORD: MTIjNUxJSUJNWEhFOFQ0  
+  POSTGRES_USER: ZGphbmdv 
+  DEBUG: "dHJ1ZQ=="
+    
+    

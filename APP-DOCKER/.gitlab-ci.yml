@@ -25,10 +25,9 @@ app_deploy:
   environment: production
   script:
     - env
-   # - export
-   # - tag=$CI_TAG
-   # - echo "Deploy app django-pg-docker-tutorial build version $tag"
-   # - export KUBECONFIG=/opt/.kube/config
-   # - helm upgrade --atomic --timeout 600s --set app-dep.tag=$tag --install --namespace $CI_NAMESPACE --create-namespace app-dep git@gitlab.com:sfc_diplom/diplom.git-/app-v1.1.tgz 
-   # #- helm upgrade --install -n diplom my-app --atomic --timeout 900s app-dpdt/
-   # - kubectl get pods -n $CI_NAMESPACE
+    - export
+    - tag=$CI_TAG
+    - echo "Deploy app django-pg-docker-tutorial build version $tag"
+    - export KUBECONFIG=/opt/.kube/config
+    - helm upgrade --atomic --timeout 600s --set django.tag=$tag --install --namespace $CI_NAMESPACE --create-namespace django git@gitlab.com:sfc_diplom/diplom.git-/app-v1.1.tgz 
+    - kubectl get pods -n $CI_NAMESPACE
