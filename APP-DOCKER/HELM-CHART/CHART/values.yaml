@@ -12,7 +12,9 @@ djangoContainer:
   args: ['-c', 'python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:3003']
 replicas: 1
 
-tag: v.1
+app:
+ tag: :v.1
+ 
 host: usmanofff.ru
 
 postgresContainer:
@@ -23,6 +25,10 @@ clasterIP:
 
 data:
   DB_HOST: ZGItcG9zdGdyZXM=
+  DB_NAME: ZGphbmdvLWRi
+  DB_USER: ZGphbmdv
+  DB_PASS: MTIjNUxJSUJNWEhFOFQ0
+  
   POSTGRES_DB: ZGphbmdvLWRi   
   POSTGRES_PASSWORD: MTIjNUxJSUJNWEhFOFQ0  
   POSTGRES_USER: ZGphbmdv 

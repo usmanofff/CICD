@@ -20,7 +20,7 @@ kind: PersistentVolumeClaim #claim a portion of persistent volume
 metadata:
   labels:
     app: db
-  name: pg-data-pv-claim
+  name: {{.Release.Name}}-data-pv-claim
 spec:
   storageClassName: manual
   accessModes:

@@ -39,10 +39,10 @@ spec:
           ports:
             - containerPort: 5432
           volumeMounts:
-            - name: pg-data-mount
+            - name: {{.Release.Name}}-data-mount
               mountPath: /var/lib/postgresql/data
 
       volumes:
-        - name: pg-data-mount
+        - name: {{.Release.Name}}-data-mount
           persistentVolumeClaim:
-            claimName: pg-data-pv-claim
+            claimName: {{.Release.Name}}-data-pv-claim

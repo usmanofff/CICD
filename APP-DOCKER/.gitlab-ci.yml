@@ -5,7 +5,7 @@ stages:
 docker_build:
   stage: build
   rules:
-    - if: $CI_TAG =~ /^v\d+.\d+/
+    - if: $CI_COMMIT_TAG =~ /^v\d+.\d+/
       exists:
         - Dockerfile
     - when: on_success
@@ -15,7 +15,7 @@ docker_build:
   script:
     - env
     - export
-    - tag=$CI_TAG
+    - tag=$CI_COMMIT_TAG
     - echo "Running build with tag $tag"
     - docker build -t usmcode/diplom:$tag .
     - docker push usmcode/diplom:$tag
@@ -26,8 +26,9 @@ app_deploy:
   script:
     - env
     - export
-    - tag=$CI_TAG
+    - tag=$CI_COMMIT_TAG
     - echo "Deploy app django-pg-docker-tutorial build version $tag"
     - export KUBECONFIG=/opt/.kube/config
-    - helm upgrade --atomic --timeout 600s --set django.tag=$tag --install --namespace $CI_NAMESPACE --create-namespace django git@gitlab.com:sfc_diplom/diplom.git-/app-v1.1.tgz 
-    - kubectl get pods -n $CI_NAMESPACE
+    - helm upgrade --atomic --timeout 600s --set app.tag=$tag --install app HELM-CHART/CHART
+    - kubectl get pods #-n $CI_NAMESPACE 
+    #--namespace $CI_NAMESPACE --create-namespace   
