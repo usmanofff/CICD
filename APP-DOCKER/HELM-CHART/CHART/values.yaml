@@ -6,14 +6,14 @@ persistentvolumeclaim:
   capacity: 200M
 
 djangoContainer:
-  image: usmcode/diplom:v.1
+  image: usmcode/diplom
   ports: 3003
   command: [ '/bin/sh' ]
   args: ['-c', 'python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:3003']
 replicas: 1
 
 app:
- tag: :v.1
+ tag: ""
  
 host: usmanofff.ru
 

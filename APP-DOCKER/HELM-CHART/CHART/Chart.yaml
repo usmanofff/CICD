@@ -2,4 +2,5 @@ apiVersion: v1
 name: chart
 version: v1.1
 icon: https://helm.sh/img/helm.svg
-appVersion: 1.0.0
+appVersion: v.1
+description: Helm Chart for diplom project SCF

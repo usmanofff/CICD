@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: {{.Release.Name}}-django
-        image: {{.Values.djangoContainer.image}}
+        image: "{{.Values.djangoContainer.image}}:{{.Values.app.tag | default .Chart.AppVersion }}"
         command: {{.Values.djangoContainer.command}}
         args: ['-c', 'python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:3003']
         ports:

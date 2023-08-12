@@ -2,6 +2,7 @@
 stages:
   - build
   - deploy
+  - deploy_Tags
 docker_build:
   stage: build
   rules:
@@ -29,6 +30,7 @@ app_deploy:
     - tag=$CI_COMMIT_TAG
     - echo "Deploy app django-pg-docker-tutorial build version $tag"
     - export KUBECONFIG=/opt/.kube/config
-    - helm upgrade --atomic --timeout 600s --set app.tag=$tag --install app HELM-CHART/CHART
-    - kubectl get pods #-n $CI_NAMESPACE 
-    #--namespace $CI_NAMESPACE --create-namespace   
+    - helm upgrade --atomic --timeout 600s --set app.tag=$tag --install --namespace diplom --create-namespace app HELM-CHART/CHART
+    - kubectl -n diplom get pods 
+
+   
