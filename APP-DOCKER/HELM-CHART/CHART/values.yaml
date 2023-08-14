@@ -15,7 +15,7 @@ replicas: 1
 app:
  tag: ""
  
-host: usmanofff.ru
+host: app.usmanofff.ru
 
 postgresContainer:
   image: postgres:13-alpine

@@ -3,4 +3,4 @@ name: chart
 version: v1.1
 icon: https://helm.sh/img/helm.svg
 appVersion: v.1
-description: Helm Chart for diplom project SCF
+description: Diplom SFC
