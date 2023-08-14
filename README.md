@@ -43,5 +43,14 @@ POSTGRES_PASSWORD=
 
 Проверем ```curl localhost:3003 ``` приложение должно отвечать.
 
+![image](https://github.com/usmanofff/CICD/assets/74288450/064125a2-c453-476a-8c61-c317d44ab44e)
+
+
+Если все отлично создаем папку с манифест файлами:
+
+
+
+
+
 
 
