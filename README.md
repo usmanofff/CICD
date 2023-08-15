@@ -108,7 +108,7 @@ Settings-CICD-Variables :
 ![image](https://github.com/usmanofff/CICD/assets/74288450/7702c830-43da-464f-b062-8a4ff6225e77)
 
 
-  
+<h1>Подготовка Helm Chart </h1>
 
 
 
