@@ -90,7 +90,7 @@ git push -uf origin
 
 config.toml который создался при активации gitlab-runner положил в /etc/gitlab-runner для автоматического запуска.
 
-<h1>Подготовка Helm Chart </h1>
+<h2>Подготовка Helm Chart </h2>
 
   - Создаем папку для манифестов KUBE-MANIFEST:
 
