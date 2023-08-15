@@ -169,7 +169,9 @@ Settings-CICD-Variables :
 
 ![image](https://github.com/usmanofff/CICD/assets/74288450/df937313-4b13-43cd-8cd5-9a3831d03d6f)
 
+![image](https://github.com/usmanofff/CICD/assets/74288450/f7590012-ccfc-4939-b611-110c1c3b776a)
 
+На Этом Спринт 2 закончен.
 
 
 
