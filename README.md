@@ -144,10 +144,14 @@ kind: PersistentVolume (для postgress)
 
 ![k_get_all](https://github.com/usmanofff/CICD/assets/74288450/5e6e0e28-91c4-4de1-81d8-2f61703319d1)
 
-Если что то не заработало можно проверять логи командой ```kubect -n dipom logs pods/имя пода```
-так же можно проверить env внутри пода ``` kubectl -n diplom exec -it pods/имя пода -с под -- env ```  
+Если что то не заработало можно проверять логи командой   ```kubect -n dipom logs pods/имя пода```
+
+так же можно проверить env внутри пода    ``` kubectl -n diplom exec -it pods/имя пода -с под -- env ```  
 
 Если все запустилось успешно идем дальше...
+
+
+
 
 
 
