@@ -89,15 +89,20 @@ stage:
   - build:
   - deploy:
 
-На стадии build описываем процесс сборки приложения из dockerfile и отправки его в Docker rigestry меткой $tag
-
-На стадии deploy разварачиваем Helm Chart из подготовленных манифестов, об этом далее...
-
 Для чуствительных данных необходимо создать переменные : 
 
 Settings-CICD-Variables :
 
 ![image](https://github.com/usmanofff/CICD/assets/74288450/826eaae4-65ec-4fa4-9e5d-c1f41919c1f5)
+
+На стадии build описываем процесс сборки приложения из dockerfile и отправки его в Docker rigestry меткой $tag
+
+![image](https://github.com/usmanofff/CICD/assets/74288450/e8ed9919-a326-4903-a77f-9ec672e3c461)
+
+
+На стадии deploy разварачиваем Helm Chart из подготовленных манифестов, об этом далее...
+
+
 
   
 
