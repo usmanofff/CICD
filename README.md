@@ -150,6 +150,13 @@ kind: PersistentVolume (для postgress)
 
 Если все запустилось успешно идем дальше...
 
+ --- Создаем Helm Chat ---
+
+ Структура чарта: 
+
+
+ ![image](https://github.com/usmanofff/CICD/assets/74288450/87447cee-93d1-45ac-940e-3c6e89ccf084)
+
 
 
 
