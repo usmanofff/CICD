@@ -55,6 +55,11 @@ POSTGRES_PASSWORD=
 
 ```Docker login``` 
 
+Собираем приложение из Dockerfile и отправляем rigestry: 
+
+```docker biuld -t usmcode/diplom:v.1 .``` 
+```docker push usmcode/diplom:v.1```
+
 
 ![image](https://github.com/usmanofff/CICD/assets/74288450/c06121a4-5c15-4f26-a48f-218c16110918)
 
@@ -114,12 +119,13 @@ Settings-CICD-Variables :
 
 Нам пондобятся:
 
-- Сущность Secret с чуствительными данными , которые необходимо предварительно зашифровать.
+- файл all_credentials.yaml Kind:Secret с чуствительными данными , которые необходимо предварительно зашифровать.
 
-Создаем файл all_credentials.yaml
-шифруем данные для приложения командой : ``` echo -n "" | base64 - шифруем , | base64 --decode - так дешифруем ```
+  ``` echo -n "" | base64 - шифруем , | base64 --decode так дешифруем ```
 
-
+Создаем Kind:Deployment :
+- файл app-deployment.yaml  с описанием запуска приложения  usmcode/diplom:v.1 из нашего Docker rigestry.
+- файл db-deployment.yaml  c описание запуска базы данных postgres:13-alpine для нашего преложения. 
 
 
 
