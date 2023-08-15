@@ -127,16 +127,26 @@ Settings-CICD-Variables :
 - файл app-deployment.yaml  с описанием запуска приложения  usmcode/diplom:v.1 из нашего Docker rigestry.
 - файл db-deployment.yaml  c описание запуска базы данных postgres:13-alpine для нашего преложения. 
 
+Создаем Kind:Service : (взаимодействие внутри кластера)
+  - app_service-cluster-ip.yaml сервис для открытие порта 3003 приложения
+  - db_service-cluster-ip.yaml сервис для открытие порта 5432 postgres 
+
+Создаем Kind:ingress : (для вывода приложения в интернет )  вкачестве ingress контроллера исползовал ``` https://projectcontour.io/getting-started/ ```
+  - app_ingress.yaml ingress правило для перенапровление трафика по выбранному селектору сервиса cluster_ip
+
+Создаем kind: PersistentVolume (для postgress)
+- db_store.yaml Хранилище данных
+
+Запускаем наши манифесты  ``` kubectl -n diplom apply -f . ```
+
+Проверяем командой ``` kubectl -n diplom get all ``` 
 
 
+![k_get_all](https://github.com/usmanofff/CICD/assets/74288450/5e6e0e28-91c4-4de1-81d8-2f61703319d1)
 
+``` kubectl get po -A ```
 
-
-
-
-
-
-
+![k_get_po-A](https://github.com/usmanofff/CICD/assets/74288450/bfb52950-0b33-4bb3-afb6-e4109733712d)
 
 
 
