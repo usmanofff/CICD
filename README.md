@@ -88,31 +88,6 @@ git push -uf origin
 
 config.toml который создался при активации gitlab-runner положил в /etc/gitlab-runner для автоматического запуска.
 
-Создаем файл .gitlab-ci.yml в котором описываем этапы сборки :
-
-stage:
-  - build:
-  - deploy:
-
-Для чуствительных данных необходимо создать переменные : 
-
-Settings-CICD-Variables :
-
-![image](https://github.com/usmanofff/CICD/assets/74288450/826eaae4-65ec-4fa4-9e5d-c1f41919c1f5)
-
-- На стадии build описываем процесс сборки приложения из dockerfile и отправки его в Docker rigestry меткой $tag
-
-Вывод:
-
-![image](https://github.com/usmanofff/CICD/assets/74288450/e8ed9919-a326-4903-a77f-9ec672e3c461)
-
-- На стадии deploy разварачиваем Helm Chart из подготовленных манифестов, об этом далее...
-
-Вывод:
-
-![image](https://github.com/usmanofff/CICD/assets/74288450/7702c830-43da-464f-b062-8a4ff6225e77)
-
-
 <h1>Подготовка Helm Chart </h1>
 
   - Создаем папку для манифестов KUBE-MANIFEST:
@@ -150,15 +125,36 @@ kind: PersistentVolume (для postgress)
 
 Если все запустилось успешно идем дальше...
 
- --- Создаем Helm Chat ---
+ --- Создаем Helm Chat на основе созданных манифестов , заменем данные переменными из файла values.yaml
 
  Структура чарта: 
-
 
  ![image](https://github.com/usmanofff/CICD/assets/74288450/87447cee-93d1-45ac-940e-3c6e89ccf084)
 
 
+Создаем файл .gitlab-ci.yml в котором описываем этапы сборки :
 
+stage:
+  - build:
+  - deploy:
+
+Для чуствительных данных необходимо создать переменные : 
+
+Settings-CICD-Variables :
+
+![image](https://github.com/usmanofff/CICD/assets/74288450/826eaae4-65ec-4fa4-9e5d-c1f41919c1f5)
+
+- На стадии build описываем процесс сборки приложения из dockerfile и отправки его в Docker rigestry меткой $tag
+
+Вывод:
+
+![image](https://github.com/usmanofff/CICD/assets/74288450/e8ed9919-a326-4903-a77f-9ec672e3c461)
+
+- На стадии deploy разварачиваем Helm Chart 
+
+Вывод:
+
+![image](https://github.com/usmanofff/CICD/assets/74288450/7702c830-43da-464f-b062-8a4ff6225e77)
 
 
 
