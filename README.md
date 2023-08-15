@@ -58,10 +58,22 @@ POSTGRES_PASSWORD=
 
 ![image](https://github.com/usmanofff/CICD/assets/74288450/c06121a4-5c15-4f26-a48f-218c16110918)
 
-В проекте создал отдельную папку для gitlab 
 
-Создаем проект в gitlab : ``` https://gitlab.com/sfc_diplom/app ```
+Создал папку APP-DOCKER и подключил к ней свой репозиторий в gitlab : ``` https://gitlab.com/sfc_diplom/app ```
 
+команды подключения репозитория :
+```
+git init
+git branch -M main
+git remote add origin git@gitlab.com:sfc_diplom/app.git
+git push -uf origin
+```
+Настройки gitlab :
+
+- Разрешаем запуск gitlab-runner для нашего проекта
+- Разрешаем push в ветку main
+
+![runners](https://github.com/usmanofff/CICD/assets/74288450/718ab76f-65da-460b-aa1a-f1c636b42074)
 
 
 
