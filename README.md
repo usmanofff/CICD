@@ -47,10 +47,11 @@ POSTGRES_PASSWORD=
 
 ![image](https://github.com/usmanofff/CICD/assets/74288450/064125a2-c453-476a-8c61-c317d44ab44e)
 
-Если все запустилось останавливаем контейнеры ``` docker stop $(docker ps -qa) ``` <p>
+Если все запустилось останавливаем контейнеры 
 
+``` docker stop $(docker ps -qa) ``` 
 
-Далее будем описывать CI-CD процесс сборки и деплоя в Doker-registry для этого будем использовать gitlab.
+<h2>Далее будем описывать CI-CD процесс сборки и деплоя в Doker-registry для этого будем использовать gitlab.</h2>
 
 Создаем учетку на DockerHub и логинемся командой:
 
