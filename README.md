@@ -48,7 +48,19 @@ POSTGRES_PASSWORD=
 ![image](https://github.com/usmanofff/CICD/assets/74288450/064125a2-c453-476a-8c61-c317d44ab44e)
 
 
-Если все отлично создаем папку с манифест файлами:
+В качестве CICD сборки и деплоя в Doker-registry будем использовать gitlab.
+
+Создаем учетку на DockerHub и логинемся командой:
+
+```Docker login``` 
+
+
+
+
+
+
+
+
 
 
 
