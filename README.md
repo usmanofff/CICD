@@ -167,6 +167,7 @@ Settings-CICD-Variables :
 
 ![image](https://github.com/usmanofff/CICD/assets/74288450/be8abb1e-fa2a-4d60-947a-822982ec8ab0)
 
+![image](https://github.com/usmanofff/CICD/assets/74288450/df937313-4b13-43cd-8cd5-9a3831d03d6f)
 
 
 
