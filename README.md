@@ -24,7 +24,7 @@ Jenkins или GitHub Actions — кому что нравится. Рекоме
 
 Создаем в корне проекта папку CICD и клонируем исходники приложения ```https://github.com/vinhlee95/django-pg-docker-tutorial```
 
-Проверяем  Dockerfile исправляем ошибки, разрешаем подключения с хостов в settings.py 
+Проверяем Dockerfile исправляем ошибки, разрешаем подключения с хостов в settings.py 
 ```
 ALLOWED_HOSTS = ['*']
 DEBUG = True
@@ -92,10 +92,10 @@ config.toml который создался при активации gitlab-run
 
   - Создаем папку для манифестов KUBE-MANIFEST:
 
-Нам пондобятся:
+Нам понадобятся:
 
 kind: Secret:
-- файл all_credentials.yaml Kind:Secret с чуствительными данными , которые необходимо предварительно зашифровать.
+- файл all_credentials.yaml Kind:Secret с чувствительными  данными , которые необходимо предварительно зашифровать.
 
   ``` echo -n "" | base64 - шифруем , | base64 --decode так дешифруем ```
 
@@ -107,8 +107,8 @@ Kind:Service : (взаимодействие внутри кластера)
   - app_service-cluster-ip.yaml сервис для открытие порта 3003 приложения
   - db_service-cluster-ip.yaml сервис для открытие порта 5432 postgres 
 
-Kind:ingress : (для вывода приложения в интернет )  вкачестве ingress контроллера исползовал ``` https://projectcontour.io/getting-started/ ```
-  - app_ingress.yaml ingress правило для перенапровление трафика по выбранному селектору сервиса cluster_ip
+Kind:ingress : (для вывода приложения в интернет )  в качестве ingress контроллера исползовал ``` https://projectcontour.io/getting-started/ ```
+  - app_ingress.yaml ingress правило для перенаправления трафика по выбранному селектору сервиса cluster_ip
 
 kind: PersistentVolume (для postgress)
   - db_store.yaml Хранилище данных
@@ -119,13 +119,13 @@ kind: PersistentVolume (для postgress)
 
 ![k_get_all](https://github.com/usmanofff/CICD/assets/74288450/5e6e0e28-91c4-4de1-81d8-2f61703319d1)
 
-Если что то не заработало можно проверять логи командой   ```kubect -n dipom logs pods/имя пода```
+Если что-то не заработало можно проверять логи командой   ```kubect -n dipom logs pods/имя пода```
 
 так же можно проверить env внутри пода    ``` kubectl -n diplom exec -it pods/имя пода -с под -- env ```  
 
 Если все запустилось успешно идем дальше...
 
- --- Создаем Helm Chat на основе созданных манифестов , заменем данные переменными из файла values.yaml
+ --- Создаем Helm Chat на основе созданных манифестов , заменяем данные переменными из файла values.yaml
 
  Структура чарта: 
 
@@ -138,7 +138,7 @@ stage:
   - build:
   - deploy:
 
-Для чуствительных данных необходимо создать переменные : 
+Для чувствительных  данных необходимо создать переменные : 
 
 Settings-CICD-Variables :
 
@@ -150,7 +150,7 @@ Settings-CICD-Variables :
 
 ![image](https://github.com/usmanofff/CICD/assets/74288450/e8ed9919-a326-4903-a77f-9ec672e3c461)
 
-- На стадии deploy разварачиваем Helm Chart тригиром должно быть изменение тэга
+- На стадии deploy разворачиваем  Helm Chart тригиром должно быть изменение тэга
 
 Вывод:
 
