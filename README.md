@@ -157,7 +157,7 @@ Settings-CICD-Variables :
 ![image](https://github.com/usmanofff/CICD/assets/74288450/7702c830-43da-464f-b062-8a4ff6225e77)
 
 
-Вносим изменения в проект создаем тэг ``` git tag -a v.1.6 ``` git push --tag ```
+Вносим изменения в проект создаем тэг ``` git tag -a v.1.6 ```  ``` git push --tag ```
 
 Должен запустится pipeline и применится новая версия приложения. 
 
