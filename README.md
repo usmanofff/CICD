@@ -72,8 +72,14 @@ git push -uf origin
 
 - Разрешаем запуск gitlab-runner для нашего проекта
 - Разрешаем push в ветку main
+- Отключаем shared runners
 
 ![runners](https://github.com/usmanofff/CICD/assets/74288450/718ab76f-65da-460b-aa1a-f1c636b42074)
+
+Проверяем работу gitlab-runner на SRV : ```systemctl status gitlab-runner```
+
+config.toml который создался при активации gitlab-runner положил в /etc/gitlab-runner для автоматического запуска.
+
 
 
 
