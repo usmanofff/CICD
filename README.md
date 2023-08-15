@@ -98,11 +98,13 @@ Settings-CICD-Variables :
 - На стадии build описываем процесс сборки приложения из dockerfile и отправки его в Docker rigestry меткой $tag
 
 Вывод:
+
 ![image](https://github.com/usmanofff/CICD/assets/74288450/e8ed9919-a326-4903-a77f-9ec672e3c461)
 
 - На стадии deploy разварачиваем Helm Chart из подготовленных манифестов, об этом далее...
 
 Вывод:
+
 ![image](https://github.com/usmanofff/CICD/assets/74288450/7702c830-43da-464f-b062-8a4ff6225e77)
 
 
