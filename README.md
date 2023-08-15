@@ -58,6 +58,9 @@ POSTGRES_PASSWORD=
 
 ![image](https://github.com/usmanofff/CICD/assets/74288450/c06121a4-5c15-4f26-a48f-218c16110918)
 
+В проекте создал отдельную папку для gitlab 
+
+Создаем проект в gitlab : ``` https://gitlab.com/sfc_diplom/app ```
 
 
 
