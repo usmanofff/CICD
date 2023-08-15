@@ -1,4 +1,4 @@
-Спринт 2
+Спринт 2 
 
 ЗАДАЧА
 
@@ -109,6 +109,8 @@ Settings-CICD-Variables :
 
 
 <h1>Подготовка Helm Chart </h1>
+
+Создаем папку для манифестов KUBE-MANIFEST
 
 
 
