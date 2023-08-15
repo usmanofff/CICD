@@ -80,6 +80,24 @@ git push -uf origin
 
 config.toml который создался при активации gitlab-runner положил в /etc/gitlab-runner для автоматического запуска.
 
+Создаем файл .gitlab-ci.yml в котором описываем этапы сборки :
+
+stage:
+  build:
+  deploy:
+
+На стадии build описываем процесс сборки приложения из dockerfile и отправки его в Docker rigestry меткой $tag
+
+На стадии deploy разварачиваем Helm Chart из подготовленных манифестов, об этом далее...
+
+Для чуствительных данных необходимо создать переменные : 
+
+Settings-CICD-Variables :
+
+![image](https://github.com/usmanofff/CICD/assets/74288450/826eaae4-65ec-4fa4-9e5d-c1f41919c1f5)
+
+  
+
 
 
 
