@@ -78,13 +78,16 @@ git push -uf origin
 
 Проверяем работу gitlab-runner на SRV : ```systemctl status gitlab-runner```
 
+![image](https://github.com/usmanofff/CICD/assets/74288450/e9e28200-c24b-4f63-bd01-8a3fe4a74533)
+
+
 config.toml который создался при активации gitlab-runner положил в /etc/gitlab-runner для автоматического запуска.
 
 Создаем файл .gitlab-ci.yml в котором описываем этапы сборки :
 
 stage:
-  build:
-  deploy:
+  - build:
+  - deploy:
 
 На стадии build описываем процесс сборки приложения из dockerfile и отправки его в Docker rigestry меткой $tag
 
