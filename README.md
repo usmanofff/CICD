@@ -24,19 +24,20 @@ Jenkins или GitHub Actions — кому что нравится. Рекоме
 
 Создаем в корне проекта папку CICD и клонируем исходники приложения ```https://github.com/vinhlee95/django-pg-docker-tutorial```
 
-Проверяем  Dockerfile исправляем ошибки, разрешаем подключения с хостов в settings.py ALLOWED_HOSTS = ['*'] DEBUG = True
+Проверяем  Dockerfile исправляем ошибки, разрешаем подключения с хостов в settings.py 
+ALLOWED_HOSTS = ['*']
+DEBUG = True
 
 Подсовываем enventory file: 
-
+```
 DB_HOST=
 DB_NAME=
 DB_USER=
 DB_PASS=
-
 POSTGRES_DB=
 POSTGRES_USER=
 POSTGRES_PASSWORD=
-
+```
 Проверяем запуск через ``` docker-compose up -d ```
 
 ![image](https://github.com/usmanofff/CICD/assets/74288450/51ecb3ef-8a9d-490d-a736-f7a10bd90086)
