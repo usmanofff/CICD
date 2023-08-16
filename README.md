@@ -22,6 +22,8 @@ Jenkins или GitHub Actions — кому что нравится. Рекоме
 образа c таким именем hub.docker.com/skillfactory/testapp:2.0.3.
 ```
 
+<h2>Начинаем CICD</h2>
+
 Создаем в корне проекта папку CICD и клонируем исходники приложения    ```https://github.com/vinhlee95/django-pg-docker-tutorial```
 
 Проверяем Dockerfile исправляем ошибки, разрешаем подключения с хостов в settings.py 
