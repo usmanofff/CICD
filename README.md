@@ -68,7 +68,7 @@ POSTGRES_PASSWORD=
 ![image](https://github.com/usmanofff/CICD/assets/74288450/c06121a4-5c15-4f26-a48f-218c16110918)
 
 
-Создал папку APP-DOCKER и подключил к ней свой репозиторий в gitlab : ``` https://gitlab.com/sfc_diplom/app ```
+Создаем папку APP-DOCKER и подключаем к ней свой репозиторий в gitlab : ``` https://gitlab.com/sfc_diplom/app ```
 
 команды подключения репозитория :
 ```
