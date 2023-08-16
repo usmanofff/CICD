@@ -99,13 +99,13 @@ config.toml который создался при активации gitlab-run
 Нам понадобятся:
 
 kind: Secret:
-- файл all_credentials.yaml Kind:Secret с чувствительными  данными , которые необходимо предварительно зашифровать.
+- all_credentials.yaml Передаются чуствительные данные для приложения, предварительно их необходимо закодировать. 
 
-  ``` echo -n "" | base64 - шифруем , | base64 --decode так дешифруем ```
+  ``` echo -n "db_password" | base64 - шифруем , | base64 --decode так дешифруем ```
 
 Kind:Deployment :
-- файл app-deployment.yaml  с описанием запуска приложения  usmcode/diplom:v.1 из нашего Docker rigestry.
-- файл db-deployment.yaml  c описание запуска базы данных postgres:13-alpine для нашего преложения. 
+-  app-deployment.yaml deploy с описанием запуска приложения  usmcode/diplom:v.1 из нашего Docker rigestry.
+-  db-deployment.yaml  deploy c описание запуска базы данных postgres:13-alpine для нашего преложения. 
 
 Kind:Service : (взаимодействие внутри кластера)
   - app_service-cluster-ip.yaml сервис для открытие порта 3003 приложения
